@@ -10,14 +10,16 @@ const App = () => {
   return (
     <Router>
       <FavorietsProvider>
-      <Navbar />
+        <div className="min-h0-screen bg-gray-900 text-white">
+          <Navbar />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movie/:id" element={<MovieDetailsPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-      </Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movie/:id" element={<MovieDetailsPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+          </Routes>
+        </div>
       </FavorietsProvider>
     </Router>
   );
